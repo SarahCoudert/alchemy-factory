@@ -5,7 +5,7 @@
 
 ### Qu'est-ce donc ?
 
-Il s'agit d'une application mobile first (comprendre ici : C'est plus joli sur que sur PC mais il y a eu une tentative de responsive) créée pour gérer un inventaire de potions et d'ingrédients alchimiques.
+Il s'agit d'une application mobile first (comprendre ici : C'est plus joli sur mobile que sur PC mais il y a eu une tentative de responsive) créée pour gérer un inventaire de potions et d'ingrédients alchimiques.
 
 ### Pourquoi ça existe ?
 
