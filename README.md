@@ -1,8 +1,10 @@
 # Alchemy Factory
 
+[![forthebadge](http://forthebadge.com/images/badges/gluten-free.svg)](http://forthebadge.com) [![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)
+
 ### Qu'est-ce donc ?
 
-Il s'agit d'une application mobile only (comprendre ici : ça marche sur mon télélphone portable et c'est assez moche sur PC) créée pour gérer un inventaire de potions et d'ingrédients alchimiques.
+Il s'agit d'une application mobile first (comprendre ici : C'est plus joli sur que sur PC mais il y a eu une tentive de responsive) créée pour gérer un inventaire de potions et d'ingrédients alchimiques.
 
 ### Pourquoi ça existe ?
 
@@ -17,5 +19,5 @@ Ruby on Rails, un peu de JS et de CSS et beaucoup d'amour :purple_heart: :blue_h
 ### Pourquoi le mettre en public ?
 Pour permettre à qui veut de s'en servir (pour ses recettes de cuisine par exemple, ou pour ses propres jeux de rôle), parce que je n'ai rien à cacher dessus et pour permettre à des recruteurs ou des curieux de voir mon travail.
 
-### C'est pas responsive et c'est pas très beau...
-Je compte refaire le CSS dans peu de temps, mais s'il vous vient l'envie de rajouter des features ou de refaire le front, alors n'hésitez pas à forker le projet et à me faire une pull request pour que j'ajoute ce que vous avez fait.
+### Je veux aider ! J'ai des idées !
+S'il vous vient l'envie de rajouter des features ou de refaire le front, alors n'hésitez pas à forker le projet et à me faire une pull request pour que j'ajoute ce que vous avez fait.
