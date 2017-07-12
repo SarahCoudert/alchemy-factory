@@ -4,7 +4,7 @@
 
 Il s'agit d'une application mobile only (comprendre ici : ça marche sur mon télélphone portable et c'est assez moche sur PC) créée pour gérer un inventaire de potions et d'ingrédients alchimiques.
 
-### Pourquoi ça existe
+### Pourquoi ça existe ?
 
 Je suis une joueuse invétérée de jeux de rôle papier, et après plusieurs mois sur une même partie à vendre des potions d'alchimie, je me suis dit qu'il serait bien plus facile pour moi de gérer mes potions et ingrédients à l'aide d'une application utilisable sur mon téléphone portable.
 
@@ -17,5 +17,5 @@ Ruby on Rails, un peu de JS et de CSS et beaucoup d'amour :purple_heart: :blue_h
 ### Pourquoi le mettre en public ?
 Pour permettre à qui veut de s'en servir (pour ses recettes de cuisine par exemple, ou pour ses propres jeux de rôle), parce que je n'ai rien à cacher dessus et pour permettre à des recruteurs ou des curieux de voir mon travail.
 
-### C'est pas responsive et c'est pas très beau
+### C'est pas responsive et c'est pas très beau...
 Je compte refaire le CSS dans peu de temps, mais s'il vous vient l'envie de rajouter des features ou de refaire le front, alors n'hésitez pas à forker le projet et à me faire une pull request pour que j'ajoute ce que vous avez fait.
