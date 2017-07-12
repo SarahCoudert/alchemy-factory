@@ -4,7 +4,7 @@ class PotionsController < ApplicationController
   # GET /potions
   # GET /potions.json
   def index
-    @potions = Potion.all
+    @potions = Potion.all.order(:name)
   end
 
   # GET /potions/1
@@ -49,9 +49,13 @@ class PotionsController < ApplicationController
   # PATCH/PUT /potions/1
   # PATCH/PUT /potions/1.json
   def update
+    
+    
     respond_to do |format|
       if @potion.update(potion_params)
         if params["ingredients"] && params["ingredients"].size > 0
+          costs = Potion.compute_production_costs(params["ingredients"])
+          potion_params["production_cost"] = costs
           Potion.destroy_recipes(@potion.id)
           Potion.save_ingredients(params["ingredients"], @potion.id)
         end
