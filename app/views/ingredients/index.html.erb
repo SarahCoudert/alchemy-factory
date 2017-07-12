@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'New Ingredient', new_ingredient_path, html_options = {:class => "btn blue"} %>
+
+<table class="ingredient">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ingredients.each do |ingredient| %>
+      <tr>
+        <td><%= link_to ingredient.name, ingredient, html_options = {:class => "btn ingredient"} %></td>
+        <td><img class="ingredient" src="<%= ingredient.picture %>" alt="<%= ingredient.name %>"></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

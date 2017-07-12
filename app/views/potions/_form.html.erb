@@ -1,0 +1,32 @@
+<%= form_for(potion) do |f| %>
+  <% if potion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(potion.errors.count, "error") %> prohibited this potion from being saved:</h2>
+
+      <ul>
+      <% potion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :ingredient_id %>
+    <%= select_tag("ingredients", options_for_select(@ingredients.collect{ |u| [u.name, u.id] }), {:multiple => true}) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save", :class => "btn blue" %>
+  </div>
+<% end %>

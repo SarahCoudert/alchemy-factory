@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @ingredient.name %>
+</p>
+
+<p>
+  <strong>Prix:</strong>
+  <%= @ingredient.production_cost %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <img src="<%= @ingredient.picture %>" alt="<%= @ingredient.name %>">
+</p>
+
+<% if(@ingredient.description && @ingredient.description.length > 0) %>
+  <p>
+    <strong>Description:</strong>
+    <%= @ingredient.description %>
+  </p>
+<% end %>
+
+<p>
+  <strong>Potions:</strong>
+  <% @potions.each do |p| %>
+    <p><%= p.name %> [<%= p.production_cost %>€]</p>
+  <% end %>
+</p>
+
+<table>
+    <td><%= link_to 'Edit', edit_ingredient_path(@ingredient), html_options = {:class => "btn green"} %></td>
+    <td><%= link_to 'Destroy', @ingredient, class: "btn red", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Back', ingredients_path, html_options = {:class => "btn blue"} %></td>
+</table>
+
+

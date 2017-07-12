@@ -1,0 +1,187 @@
+$border: 5px solid #333;
+$border-tiny: 1px solid #333;
+$background-color: #00477b;
+
+*{
+  box-sizing: border-box;
+}
+
+a.potion:hover {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+a.potion {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none; 
+}
+
+.dot {
+  position: absolute;
+  z-index: 4;
+  border-radius: 100%;
+  background-color: #ff6e0f;
+  border: $border-tiny;
+}
+
+.bottle-1-wrapper{
+  $bottle-width: 240px;
+  margin: 0 auto;
+  position: relative;
+  width: 380px;
+  height: 350px;
+  display: inline-block;
+  .body{
+    width:$bottle-width;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - #{$bottle-width / 2});
+    height: 225px;
+    border: $border;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    .neck,.neck-back-plate{
+      position: absolute;
+      border: $border;
+      width: $bottle-width /3;
+      height: 50px;
+      border-bottom: none;
+      left: calc(50% - #{($bottle-width / 3) / 2});
+      top: -50px;
+    }
+    .neck-back-plate{
+      z-index:5;
+      background-color: rgba(0,71,123, 0.3);
+    }
+    .neck{
+      z-index:2;
+      background-color: $background-color;
+    }
+    .neck-top{
+      position: absolute;
+      border: $border;
+      border-radius: 5px;
+      width: 80px;
+      height: 30px;
+      left: calc(50% - 40px);
+      background-color: rgba(0,71,123, 0.5);
+      top: -54px;
+      z-index: 5;
+      
+    }
+    .bottle-cup{
+      position: absolute;
+      z-index:3;
+      left: calc(50% - 38px);
+      top: -70px;
+      border-top: 60px solid #333;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      width: 76px;
+      &:before{
+        content:"";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        z-index:4;
+        left: calc(50% - 38px);
+        top: -60px;
+        border-top: 60px solid #f39c12;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        width: 76px;
+        transform: scale(0.8);
+      }
+      .dot{
+        &.d1{
+          @extend .dot;
+          width: 10px;
+          height: 10px;
+          top: -36px; left: 4px;
+          &:after{
+            content: "";
+            @extend .dot;
+            width: 7px;
+            height: 7px;
+            top: 12px; left: 15px;
+          }
+          &:before{
+            content: "";
+            @extend .dot;
+            width: 7px;
+            height: 7px;
+            top: 19px; left: 0px;
+          }
+        }
+        &.d2{
+          @extend .dot;
+          top: -47px; left: 12px;
+          width: 10px;
+          height: 10px;
+          &:before{
+            content: "";
+            @extend .dot;
+            width: 4px;
+            height: 4px;
+            top: -7px; left: 38px;
+          }
+          &:after{
+            content: "";
+            @extend .dot;
+            width: 4px;
+            height: 4px;
+            top: 13px; left: 7px;
+          }
+        }
+        &.d3{
+          @extend .dot;
+          top: -50px; left: 40px;
+          width: 5px;
+          height: 5px;
+        }
+      }
+    }
+
+    .sticker{
+      position: absolute;
+      top: 100px; left: 5px;
+      z-index: 5;
+      width: 220px;
+      height: 70px;
+      border: $border;
+      border-radius: 5px;
+      background-color: rgba(255,255,255,0.7);
+      span{
+        font-size: 28px;
+        font-weight: 800;
+        color: #333;
+        opacity: .8;
+        display: block;
+        text-align: center;
+      }
+    }
+    .liquid{
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.liquid{
+  position: relative;
+  width: 230px;
+  height: 205px;
+  overflow: hidden;
+  border-radius: 5px;
+  .water{
+    position: absolute;
+    width: 230px;
+    height: 155px;
+    bottom: 0;
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @potion.name %></h1>
+
+<p>
+  <strong>Coût:</strong>
+  <span id="production_cost"><%= @potion.production_cost %></span>€
+</p>
+
+<p>
+  <p><strong>Marge voulue :</strong></p>
+  <p><input id="margin" type="number" min="0" max="100" value="20"><span> %</span></p>
+  <p id="new_price" class="btn blue">Calculer</p>
+</p>
+
+<p>
+  <p><strong>Prix de vente : </strong></p>
+  <p><span id="result"><%= @sale_price %></span><span>€</span></p>
+</p>
+
+<% if(@potion.description && @potion.description.length > 0) %>
+  <p>
+    <strong>Description:</strong>
+  </p>
+  <p>
+    <%= @potion.description %>
+  </p>
+<% end %>
+
+<p>
+  <strong>Ingrédients:</strong>
+  <% @ingredients.each do |i| %>
+  	<p><%= i.name %> [<%= i.production_cost %>€] </p>
+  <% end %>
+</p>
+
+<table>
+  <td><%= link_to 'Edit', edit_potion_path(@potion), html_options = {:class => "btn green"}  %></td>
+  <td><%= link_to 'Destroy', @potion, :class => "btn red", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <td><%= link_to 'Back', potions_path, html_options = {:class => "btn blue"} %></td>
+</table>

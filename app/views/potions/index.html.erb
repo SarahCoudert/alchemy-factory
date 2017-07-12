@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+  <%= link_to 'New Potion', new_potion_path, html_options = {:class => "btn blue"} %>
+</div>
+
+<div>
+  <% @potions.each do |potion| %>
+    <%= link_to(potion, html_options = {:class => "potion"}) do %>
+    <div class="bottle-1-wrapper">
+      <div class="body">
+        <div class="neck"></div>
+        <div class="neck-back-plate"></div>
+        <div class="neck-top"></div>
+        <div class="bottle-cup">
+          <div class="dot d1"></div>
+          <div class="dot d2"></div>
+          <div class="dot d3"></div>
+        </div>
+        <div class="sticker">
+          <span><%= potion.name %></span>
+        </div>    
+        <div class="liquid">
+          <div class="water" style="background-color: #<%= potion.hexColor %>;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>

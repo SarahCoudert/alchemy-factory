@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alchemy Factory</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<nav class="pushmenu"><!--burger left menu-->
+	  	<a href="/">Home</a>
+	  	<a href="/potions">Potions</a>
+	  	<a href="/ingredients">Ingrédients</a>
+	</nav>
+
+  <div id="nav_list"><!--Burger left-->
+
+  	<div class="burger-line"></div>
+  	<div class="burger-line"></div>
+  	<div class="burger-line"></div>
+  </div>
+
+    <%= yield %>
+  </body>
+</html>

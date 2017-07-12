@@ -1,0 +1,25 @@
+img {
+	width: 150px;
+	alignment-baseline: middle;
+}
+
+img.ingredient {
+	width: 250px;
+}
+
+table.ingredient {
+	margin-top: 50px;
+}
+
+.btn.ingredient:hover {
+	background-color: inherit;
+	color: darkblue;
+}
+
+.btn.ingredient:active {
+	background-color: inherit;
+	color: darkblue;
+	border: none;
+	text-decoration: none;
+	box-shadow: none;
+}
