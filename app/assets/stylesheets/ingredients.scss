@@ -1,14 +1,14 @@
 img {
-	width: 150px;
+	width: 100px;
 	alignment-baseline: middle;
 }
 
 img.ingredient {
-	width: 250px;
+	width: 100px;
 }
 
 table.ingredient {
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 .btn.ingredient:hover {
@@ -22,4 +22,11 @@ table.ingredient {
 	border: none;
 	text-decoration: none;
 	box-shadow: none;
+}
+
+
+@media only screen and (max-width: 980px) {
+	img { width: 150px; }
+	img.ingredient { width: 250px; }
+	table.ingredient { margin-top: 50px; }
 }

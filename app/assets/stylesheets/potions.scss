@@ -2,60 +2,50 @@ $border: 5px solid #333;
 $border-tiny: 1px solid #333;
 $background-color: #00477b;
 
+#potions_wrapper {
+  margin-top: 150px;
+}
+
 *{
   box-sizing: border-box;
 }
 
-a.potion:hover {
-  background-color: inherit;
-  color: inherit;
-  text-decoration: none;
-}
-
-a.potion {
-  background-color: inherit;
-  color: inherit;
-  text-decoration: none; 
-}
-
-.dot {
+.dot{
   position: absolute;
   z-index: 4;
   border-radius: 100%;
-  background-color: #ff6e0f;
+  background-color: #d35400;
   border: $border-tiny;
 }
-
 .bottle-1-wrapper{
-  $bottle-width: 240px;
-  margin: 0 auto;
+  $bottle-width: 200px;
+  margin: 150px auto;
   position: relative;
-  width: 380px;
-  height: 350px;
+  width: 270px;
   display: inline-block;
   .body{
     width:$bottle-width;
     position: absolute;
     bottom: 0;
     left: calc(50% - #{$bottle-width / 2});
-    height: 225px;
+    height: 200px;
     border: $border;
-    border-top-left-radius: 80px;
-    border-top-right-radius: 80px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
     .neck,.neck-back-plate{
       position: absolute;
       border: $border;
       width: $bottle-width /3;
-      height: 50px;
+      height: 30px;
       border-bottom: none;
       left: calc(50% - #{($bottle-width / 3) / 2});
-      top: -50px;
+      top: -29px;
     }
     .neck-back-plate{
       z-index:5;
-      background-color: rgba(0,71,123, 0.3);
+      background-color: rgba(41, 128, 185, 0.3);
     }
     .neck{
       z-index:2;
@@ -68,7 +58,7 @@ a.potion {
       width: 80px;
       height: 30px;
       left: calc(50% - 40px);
-      background-color: rgba(0,71,123, 0.5);
+      background-color: rgba(53, 151, 219, 0.5);
       top: -54px;
       z-index: 5;
       
@@ -76,24 +66,24 @@ a.potion {
     .bottle-cup{
       position: absolute;
       z-index:3;
-      left: calc(50% - 38px);
+      left: calc(50% - 28px);
       top: -70px;
       border-top: 60px solid #333;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      width: 76px;
+      width: 56px;
       &:before{
         content:"";
         display: block;
         box-sizing: border-box;
         position: absolute;
         z-index:4;
-        left: calc(50% - 38px);
+        left: calc(50% - 28px);
         top: -60px;
         border-top: 60px solid #f39c12;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        width: 76px;
+        width: 56px;
         transform: scale(0.8);
       }
       .dot{
@@ -119,7 +109,7 @@ a.potion {
         }
         &.d2{
           @extend .dot;
-          top: -47px; left: 12px;
+          top: -47px; left: 19px;
           width: 10px;
           height: 10px;
           &:before{
@@ -127,7 +117,7 @@ a.potion {
             @extend .dot;
             width: 4px;
             height: 4px;
-            top: -7px; left: 38px;
+            top: -7px; left: 10px;
           }
           &:after{
             content: "";
@@ -139,28 +129,28 @@ a.potion {
         }
         &.d3{
           @extend .dot;
-          top: -50px; left: 40px;
+          top: -50px; left: 4px;
           width: 5px;
           height: 5px;
         }
       }
     }
-
     .sticker{
       position: absolute;
-      top: 100px; left: 5px;
+      top: 80px; left: calc(0% + 5px);
       z-index: 5;
-      width: 220px;
-      height: 70px;
+      width: 180px;
+      height: 80px;
       border: $border;
       border-radius: 5px;
       background-color: rgba(255,255,255,0.7);
       span{
-        font-size: 28px;
+        font-size: 19px;
         font-weight: 800;
         color: #333;
         opacity: .8;
         display: block;
+        margin-top: 20px;
         text-align: center;
       }
     }
@@ -173,15 +163,150 @@ a.potion {
 
 .liquid{
   position: relative;
-  width: 230px;
-  height: 205px;
+  width: 190px;
+  height: 190px;
   overflow: hidden;
-  border-radius: 5px;
   .water{
     position: absolute;
-    width: 230px;
-    height: 155px;
+    width: 190px;
+    height: 130px;
     bottom: 0;
+    background-color: #DB9634;
+  }
+}
+
+
+a.potion:hover {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+a.potion {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none; 
+}
+
+@media only screen and (max-width: 980px) {
+  .dot {
+    position: absolute;
+    z-index: 4;
+    border-radius: 100%;
+    background-color: #ff6e0f;
+    border: $border-tiny;
+  }
+
+  .bottle-1-wrapper{
+    $bottle-width: 240px;
+    margin: 0 auto;
+    position: relative;
+    width: 380px;
+    height: 350px;
+    display: inline-block;
+    .body{
+      width:$bottle-width;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - #{$bottle-width / 2});
+      height: 225px;
+      border: $border;
+      border-top-left-radius: 80px;
+      border-top-right-radius: 80px;
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+      .neck,.neck-back-plate{
+        position: absolute;
+        border: $border;
+        width: $bottle-width /3;
+        height: 50px;
+        border-bottom: none;
+        left: calc(50% - #{($bottle-width / 3) / 2});
+        top: -50px;
+      }
+      .neck-back-plate{
+        z-index:5;
+        background-color: rgba(0,71,123, 0.3);
+      }
+      .neck{
+        z-index:2;
+        background-color: $background-color;
+      }
+      .neck-top{
+        position: absolute;
+        border: $border;
+        border-radius: 5px;
+        width: 80px;
+        height: 30px;
+        left: calc(50% - 40px);
+        background-color: rgba(0,71,123, 0.5);
+        top: -54px;
+        z-index: 5;
+        
+      }
+      .bottle-cup{
+        position: absolute;
+        z-index:3;
+        left: calc(50% - 38px);
+        top: -70px;
+        border-top: 60px solid #333;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        width: 76px;
+        &:before{
+          content:"";
+          display: block;
+          box-sizing: border-box;
+          position: absolute;
+          z-index:4;
+          left: calc(50% - 38px);
+          top: -60px;
+          border-top: 60px solid #f39c12;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          width: 76px;
+          transform: scale(0.8);
+        }
+      }
+
+      .sticker{
+        position: absolute;
+        top: 100px; left: 5px;
+        z-index: 5;
+        width: 220px;
+        height: 70px;
+        border: $border;
+        border-radius: 5px;
+        background-color: rgba(255,255,255,0.7);
+        span{
+          font-size: 28px;
+          font-weight: 800;
+          color: #333;
+          opacity: .8;
+          display: block;
+          margin-top: 0px;
+          text-align: center;
+        }
+      }
+      .liquid{
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+
+  .liquid{
+    position: relative;
+    width: 230px;
+    height: 205px;
+    overflow: hidden;
     border-radius: 5px;
+    .water{
+      position: absolute;
+      width: 230px;
+      height: 155px;
+      bottom: 0;
+      border-radius: 5px;
+    }
   }
 }

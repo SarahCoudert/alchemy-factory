@@ -4,7 +4,7 @@
   <%= link_to 'New Potion', new_potion_path, html_options = {:class => "btn blue"} %>
 </div>
 
-<div>
+<div id="potions_wrapper">
   <% @potions.each do |potion| %>
     <%= link_to(potion, html_options = {:class => "potion"}) do %>
     <div class="bottle-1-wrapper">

@@ -4,9 +4,13 @@ div.home {
 	text-align: center;
 }
 
-div.home > p { font-size: 6vw; margin: 100px;}
-div.home > h1 { font-size: 8vw; margin: 100px;}
-
 #home {
-	width: 90vw;
+	width: 50vw;
+	margin: 50px auto;
+}
+
+@media only screen and (max-width: 980px) {
+	div.home > p { font-size: 6vw; margin: 100px;}
+	div.home > h1 { font-size: 8vw; margin: 100px;}
+	#home {width: 90vw;}
 }
