@@ -50,14 +50,16 @@ class PotionsController < ApplicationController
   # PATCH/PUT /potions/1.json
   def update
     
-    
     respond_to do |format|
       if @potion.update(potion_params)
         if params["ingredients"] && params["ingredients"].size > 0
-          costs = Potion.compute_production_costs(params["ingredients"])
-          potion_params["production_cost"] = costs
+          
           Potion.destroy_recipes(@potion.id)
           Potion.save_ingredients(params["ingredients"], @potion.id)
+          
+          costs = Potion.compute_production_costs(params["ingredients"])
+          @potion.production_cost = costs
+          @potion.save
         end
         format.html { redirect_to @potion, notice: 'Potion was successfully updated.' }
         format.json { render :show, status: :ok, location: @potion }
